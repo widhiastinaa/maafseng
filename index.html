@@ -1,53 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Maaf, Putri Lisa sengku</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Maaf untuk Putri Lisa Sengku</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Envelope -->
-  <div class="envelope-wrapper" id="envelopeWrapper">
+
+<div class="envelope-container" id="envelopeContainer">
     <div class="envelope" id="envelope">
-      <div class="flap"></div>
-      <div class="front"></div>
-      <div class="letter">Klik untuk membuka 💌</div>
+        <div class="flap"></div>
+        <div class="letter">
+            <p>Klik untuk membuka surat 💌</p>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Message Card -->
-  <main class="container hidden" id="messageCard">
-    <section class="card">
-      <div class="heart" aria-hidden="true"></div>
-      <h1 id="typewriter-title"></h1>
-      <p class="subtitle">Maafkan aku... 🌷</p>
-      <div class="message">
-        <p id="typewriter-intro"></p>
-        <p>
-          Aku ingin minta maaf dari hati. Kalau aku salah kata, salah sikap,
-          atau membuatmu sedih — bukan maksudku. Aku ingin berubah dan
-          menjadi lebih baik untuk kamu.
-        </p>
-        <p>
-          Kamu berarti banget bagiku. Kalau kamu berkenan, aku ingin
-          memperbaiki semuanya. Terima kasih sudah sabar dan selalu ada.
-        </p>
-        <p class="signature">— Dengan sepenuh hati, Widhi sengmu</p>
-      </div>
+<div class="letter-content" id="letterContent">
+    <h1>Untuk Putri Lisa Sengku 💖</h1>
+    <p id="typedText"></p>
 
-      <div class="actions">
-        <button id="downloadBtn">Unduh Surat (PNG)</button>
-      </div>
-    </section>
-  </main>
+    <div class="buttons">
+        <button id="downloadBtn">📥 Unduh Surat (PNG)</button>
+    </div>
 
-  <!-- Music embed (YouTube as audio only) -->
-  <div style="position:fixed; width:0; height:0; overflow:hidden;">
-    <iframe src="https://www.youtube.com/embed/zt4NeGqnCOk?autoplay=1&loop=1&playlist=zt4NeGqnCOk" frameborder="0" allow="autoplay"></iframe>
-  </div>
+    <p class="after-read">Sudah selesai bacanya seng? klik ini ya</p>
+    <a class="next-link" href="https://widhiastinaa.github.io/untuksengkuu/" target="_blank">💌 Lanjut di sini</a>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="script.js"></script>
+<audio id="bgMusic" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
