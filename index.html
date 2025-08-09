@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maaf, Putri Lisa sengku</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Envelope -->
+  <div class="envelope-wrapper" id="envelopeWrapper">
+    <div class="envelope" id="envelope">
+      <div class="flap"></div>
+      <div class="front"></div>
+      <div class="letter">Klik untuk membuka 💌</div>
+    </div>
+  </div>
+
+  <!-- Message Card -->
+  <main class="container hidden" id="messageCard">
+    <section class="card">
+      <div class="heart" aria-hidden="true"></div>
+      <h1 id="typewriter-title"></h1>
+      <p class="subtitle">Maafkan aku... 🌷</p>
+      <div class="message">
+        <p id="typewriter-intro"></p>
+        <p>
+          Aku ingin minta maaf dari hati. Kalau aku salah kata, salah sikap,
+          atau membuatmu sedih — bukan maksudku. Aku ingin berubah dan
+          menjadi lebih baik untuk kamu.
+        </p>
+        <p>
+          Kamu berarti banget bagiku. Kalau kamu berkenan, aku ingin
+          memperbaiki semuanya. Terima kasih sudah sabar dan selalu ada.
+        </p>
+        <p class="signature">— Dengan sepenuh hati, Widhi sengmu</p>
+      </div>
+
+      <div class="actions">
+        <button id="downloadBtn">Unduh Surat (PNG)</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Music embed (YouTube as audio only) -->
+  <div style="position:fixed; width:0; height:0; overflow:hidden;">
+    <iframe src="https://www.youtube.com/embed/zt4NeGqnCOk?autoplay=1&loop=1&playlist=zt4NeGqnCOk" frameborder="0" allow="autoplay"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

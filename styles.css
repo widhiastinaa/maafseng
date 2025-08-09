@@ -1,0 +1,157 @@
+:root{
+  --bg: #fff9f7;
+  --card: #ffffff;
+  --accent: #ff6b81;
+  --muted: #6b6b6b;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Segoe UI", Roboto, system-ui, Arial;
+  background: radial-gradient(circle at 10% 10%, #fff6f0 0%, var(--bg) 40%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:32px;
+}
+
+/* Envelope animation */
+.envelope-wrapper {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.envelope {
+  position:relative;
+  width:200px;
+  height:140px;
+  background:#f7d9c4;
+  border:2px solid #d3b4a2;
+  cursor:pointer;
+  transform-style:preserve-3d;
+}
+.envelope .flap {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:70%;
+  background:#f7d9c4;
+  transform-origin:top;
+  transition:transform 1s ease;
+  border-bottom:2px solid #d3b4a2;
+}
+.envelope.open .flap {
+  transform:rotateX(-180deg);
+}
+.envelope .front {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#f7d9c4;
+}
+.envelope .letter {
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  height:90%;
+  background:#fff;
+  border:1px solid #ddd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* Hidden state for card */
+.hidden {
+  display:none;
+}
+
+.container{max-width:900px;width:100%;margin-top:20px}
+.card{
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border:6px solid #000;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:6px;
+  border-radius:8px;
+  border:12px solid #fff;
+  pointer-events:none;
+}
+.card > *{
+  position:relative;
+}
+
+.heart{
+  width:120px;height:120px;
+  background:linear-gradient(180deg,var(--accent), #ff9aa2);
+  transform:rotate(-45deg);
+  margin:-70px auto 8px auto;
+  border-radius:20px 20px 0 0;
+}
+.heart::after, .heart::before{
+  content:"";
+  position:absolute;
+  width:120px;height:120px;
+  background:inherit;
+  border-radius:50%;
+}
+.heart::before{ top:-60px; left:0 }
+.heart::after{ left:60px; top:0 }
+
+h1{ text-align:center; font-size:28px; margin-top:8px; color:#111}
+.subtitle{ text-align:center; color:var(--muted); margin-bottom:18px}
+
+.message{
+  background:rgba(255,255,255,0.9);
+  padding:18px;
+  border-radius:8px;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+.signature{ margin-top:12px; font-weight:600; color:#333 }
+
+.actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+button, a#openGit{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:600;
+}
+a#openGit{ background:#4b8bf5 }
+.note{ text-align:center; color:var(--muted); margin-top:12px; font-size:13px }
+
+.typewriter-cursor {
+  border-right: 2px solid var(--accent);
+  animation: blink 0.8s infinite;
+}
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: var(--accent); }
+}
