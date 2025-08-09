@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Maaf untuk Putri Lisa Sengku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="envelope-container" id="envelopeContainer">
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="letter">
+            <p>Klik untuk membuka surat 💌</p>
+        </div>
+    </div>
+</div>
+
+<div class="letter-content" id="letterContent">
+    <h1>Untuk Putri Lisa Sengku 💖</h1>
+    <p id="typedText"></p>
+
+    <div class="buttons">
+        <button id="downloadBtn">📥 Unduh Surat (PNG)</button>
+    </div>
+
+    <p class="after-read">Sudah selesai bacanya seng? klik ini ya</p>
+    <a class="next-link" href="https://widhiastinaa.github.io/untuksengkuu/" target="_blank">💌 Lanjut di sini</a>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+    <script>
+    function openLetter() {
+            document.body.classList.add('open');
+            document.getElementById('bgMusic').play();
+    }
+    </script>
+</script>
+</body>
+</html>
